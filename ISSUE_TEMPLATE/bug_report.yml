@@ -1,0 +1,73 @@
+name: Bug 报告
+description: 报告运行结果与微信开发者工具 / 真机不一致、崩溃或其他错误
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请先搜索是否已有相同的 Issue。
+        **请不要粘贴微信基础库、编译器等专有代码的大段内容**，说明版本和行为即可。安全问题请参考 SECURITY.md 私下报告。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 发生了什么？期望的结果是什么？如果与微信开发者工具或真机的表现不同，请分别说明。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 最好提供一个能复现问题的最小小程序项目（仓库链接或压缩包），以及操作步骤。
+      placeholder: |
+        1. 运行 `wxa-runner dev ./demo`
+        2. 打开首页，点击「提交」
+        3. 控制台报错 ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 报错信息
+      description: 浏览器控制台、终端中的相关输出。
+      render: shell
+
+  - type: input
+    id: project-version
+    attributes:
+      label: 工具版本
+      description: 例如 wxa-runner 的版本号或 commit
+    validations:
+      required: true
+
+  - type: input
+    id: baselib
+    attributes:
+      label: 微信基础库版本
+      description: 启动时终端会打印，例如 3.7.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: 项目类型
+      options:
+        - 原生小程序
+        - uni-app
+        - Taro
+        - 其他框架
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 操作系统、浏览器及版本、Node.js 版本、微信开发者工具版本
+      placeholder: macOS 15 / Chrome 140 / Node 22 / 开发者工具 2.01.2510270
+    validations:
+      required: true

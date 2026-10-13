@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全问题
+    url: https://github.com/open-wxa/.github/blob/main/SECURITY.md
+    about: 请通过私密漏洞报告提交，不要公开发布
+  - name: 微信官方问题
+    url: https://developers.weixin.qq.com/community/develop/mixflow
+    about: 微信基础库、开发者工具本身的问题，请到微信开放社区反馈
